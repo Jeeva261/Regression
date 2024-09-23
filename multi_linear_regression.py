@@ -45,3 +45,10 @@ print(f'mean square error:{mse}')
 
 
 
+new_pred=[30,0,70]
+
+new_pred_id=model.predict([new_pred])
+print(new_pred_id[0])
+
+
+
