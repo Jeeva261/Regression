@@ -52,3 +52,11 @@ print(new_pred_id[0])
 
 
 
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, y_pred, color='blue', alpha=0.6)
+plt.plot([y.min(), y.max()], [y.min(), y.max()], color='red', linewidth=2)  # Line of perfect prediction
+plt.title("Actual vs Predicted Salaries")
+plt.xlabel("Actual Salaries")
+plt.ylabel("Predicted Salaries")
+plt.grid()
+plt.show()
