@@ -9,7 +9,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 # 2.Evaluate the model using R^2 and MSE
 
 
-file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\exp.csv'
+file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\simple_exp.csv'
 df=pd.read_csv(file_path)
 print(df.head())
 

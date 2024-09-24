@@ -40,7 +40,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score,mean_squared_error
 
-file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\exp.csv'
+file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\simple_exp.csv'
 df=pd.read_csv(file_path)
 print(df)
 
@@ -48,7 +48,6 @@ x=df[["Salary"]]
 y=df["YearsExperience"]
 print(x)
 print(y)
-
 
 X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size=0.2,random_state=0)
 print(X_test)

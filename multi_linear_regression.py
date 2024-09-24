@@ -20,7 +20,7 @@ x=res[["Experience","Education_Level_New","Age"]]
 y=df["Salary"]
 print(x,y)
 
-x_test,x_train,y_test,y_train=train_test_split(x,y,test_size=0.2,random_state=0)
+x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.2,random_state=0)
 print(x_train)
 print(y_train)
 
