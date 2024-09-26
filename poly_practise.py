@@ -13,7 +13,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 x = np.linspace(0, 10, 100).reshape(-1, 1) 
 y = 2 * x**2 + 3 * x + 4 + np.random.randn(100, 1) * 10 
 
-print(x,y)
+
 
 # linear regression
 model=LinearRegression()
@@ -32,7 +32,7 @@ model_poly=LinearRegression()
 res=model_poly.fit(x_poly,y)
 
 y_pred_poly=model_poly.predict(x_poly)
-print(y_pred_poly)
+
 
 l_mse=mean_squared_error(y,y_pred)
 print(f"linear mean square error:{l_mse}")
