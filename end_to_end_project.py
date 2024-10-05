@@ -25,26 +25,3 @@ print(df.info())
 print(df.corr())
 
 
-# heatmap for describe
-
-plt.figure(figsize=(10,10))
-sns.heatmap(df.describe(),cmap="viridis",linecolor="white",linewidths=0.2,annot=True)
-plt.title('Describe of House data')
-plt.show()
-
-
-# heatmap for corr
-
-plt.figure(figsize=(15,10))
-sns.heatmap(df.corr(),cmap="viridis",linecolor="white",linewidths=0.2,annot=True)
-plt.show()
-
-for col in df.columns:
-    sns.boxplot(df,y=col)
-    plt.title(f"Distribution of {col}in the dataset")
-    plt.show()
-
-plt.figure(figsize=(10,6))
-sns.boxplot(df)
-plt.show()
-

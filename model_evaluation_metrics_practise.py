@@ -54,3 +54,53 @@ elif r_square <= 0.8:
 else:
     print("The model explains a large portion of the variance (strong predictive power).")
 
+
+# 2.Compare the metrics for different regression models on the same dataset
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression,Lasso,Ridge
+from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
+from sklearn.datasets import load_diabetes
+
+diabetes=load_diabetes()
+x=diabetes.data
+y=diabetes.target
+
+
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
+
+model={
+    "linear_model":LinearRegression(),
+    "Lasso_model":Lasso(),
+    "Ridge_model":Ridge()    
+
+}
+
+result={}
+
+for model_name,model in model.items():
+    model.fit(x_train,y_train)
+    y_pred=model.predict(x_test)
+    
+
+
+    mae=mean_absolute_error(y_test,y_pred)
+    mse=mean_squared_error(y_test,y_pred)
+    rsquare=r2_score(y_test,y_pred)
+    rmse=np.sqrt(mse)
+
+
+    result[model_name]={
+        "MAE":mae,
+        "MSE":mse,
+        "RSQUARE":rsquare,
+        "RMSE":rmse
+    }
+
+df=pd.DataFrame(result).T
+print(df)
