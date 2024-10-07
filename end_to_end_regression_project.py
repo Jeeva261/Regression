@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression,Ridge,Lasso
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
 
 # collection and load data
-file_path=r"C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\end_to_end_project.csv"
+file_path=r"C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\end_to_end_regression_project.csv"
 df=pd.read_csv(file_path)
 df.drop(columns=["date","street","city","statezip","country"],inplace=True)
 print(df)
