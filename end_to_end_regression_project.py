@@ -63,7 +63,7 @@ plt.show()
 # Correlation matrix
 
 correlation_matrix=df.corr()
-plt.figure(figsize=(12,8))
+plt.figure(figsize=(10,8))
 sns.heatmap(correlation_matrix,cmap="viridis",annot=True,linecolor="white",linewidths=0.2)
 plt.title('Correlation Heatmap')
 plt.show()
@@ -110,18 +110,18 @@ plt.xlabel('Actual Prices')
 plt.ylabel('Predicted Prices')
 plt.show()
 
-from flask import Flask, request, jsonify
+# from flask import Flask, request, jsonify
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    data = request.json
-    input_data = pd.DataFrame([data])
-    prediction = model.predict(input_data)
-    return jsonify({'predicted_price': prediction[0]})
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     data = request.json
+#     input_data = pd.DataFrame([data])
+#     prediction = model.predict(input_data)
+#     return jsonify({'predicted_price': prediction[0]})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 

@@ -40,7 +40,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score,mean_squared_error
 
-file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\simple_exp.csv'
+file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\simple_linear_regression\simple_exp.csv'
 df=pd.read_csv(file_path)
 print(df)
 

@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 from sklearn.preprocessing import LabelEncoder
 
 # loaded dataset
-file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\multi_exp.csv'
+file_path=r'C:\Users\ADMIN\OneDrive\Desktop\AIML githup\Regression\multi_linear_regression\multi_exp.csv'
 df=pd.read_csv(file_path)
 print(df.head())
 encoding=LabelEncoder()
